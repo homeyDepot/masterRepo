@@ -1,0 +1,14 @@
+{
+	"sqltools.connections": [
+		{
+			"connectionTimeout": 10,
+			"database": "products_list",
+			"dialect": "PostgreSQL",
+			"name": "test",
+			"password": "password",
+			"port": 8080,
+			"server": "localhost",
+			"username": "root"
+		}
+	]
+}
