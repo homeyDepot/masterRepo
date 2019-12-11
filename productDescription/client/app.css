@@ -1,0 +1,61 @@
+
+.app{
+	background-color: purple;
+	height: 935px;
+	width: 500px;
+
+}
+.App{
+	display: flex;
+	font-family: helvetica-neue,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+.product-info{
+	display: row;
+	
+
+}
+
+.product-header{
+	flex-direction: row;
+	border-bottom: 1px solid #ccc;
+
+}
+.FrankyAndJuliusDoYourShit{
+	display: row;
+}
+.FrankyComponent , .JuliusComponent{
+	display: row;
+	font: 0.8rem;
+	color: blue;
+}
+.product-price{
+	display: row;
+}
+.product-price-large {
+	align-self: auto;
+	font-size: 4.4rem;
+    /* vertical-align: top; */
+    /* line-height: 40px; */
+    /* margin: 0 2px; */
+}
+
+
+.product-price-small {
+	font-size: 2.4rem;
+    vertical-align: top;
+    line-height: 40px;
+    margin: 0 2px;
+}
+
+.fullDescription{
+	display: inline;
+	font: 0.8rem;
+	color: blue;
+
+}
+.product-minDescription{
+	padding: 10px;
+}
