@@ -1,14 +1,14 @@
 //const app = require('./app.js');
 
 const express = require('express');
-
+const cors = require('cors')
 const app = express();
-
+app.use(cors())
 app.use(express.static('dist'));
 const readDb = require('../db/index');
-const port = process.env.port || '8080';
+const port = process.env.port || '3001';
 
-console.log(app);
+// console.log(app);
 app.get('/product', async (req, res) => {
   try {
     let results = await readDb.readDb.all();
@@ -34,5 +34,5 @@ app.get('/product/:id', async (req, res) => {
 });
 app.listen(port, () => {
   // eslint-disable-next-line no-console
-  console.log(`Now listening on ${port}`);
+  console.log(`Now listening on http://localhost:${port}`);
 });

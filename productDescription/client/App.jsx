@@ -16,33 +16,33 @@ class App extends Component {
     this.fetchOne();
   }
   fetchProducts() {
-    Axios.get('http://localhost:8080/product').then(({ data }) => {
-      console.log(data)
+    Axios.get('http://localhost:3001/product').then(({ data }) => {
+      // console.log(data)
       this.setState({ products: data });
     });
   }
   fetchOne() {
-    console.log('Yo yo yo', this.state.query);
+    // console.log('Yo yo yo', this.state.query);
     if (this.state.query === '') {
       this.setState({
         products: [],
         query: 1
       });
     }
-    console.log(this.state.query)
-    Axios.get('http://localhost:8080/product/', { id: this.state.query }).then(({ data }) => {
+    // console.log(this.state.query)
+    Axios.get('http://localhost:3001/product/', { id: this.state.query }).then(({ data }) => {
       this.setState({ products: data });
     });
   }
 
   render() {
-    console.log(this.state.products);
+    // console.log(this.state.products);
     const products = this.state.products.map(product => {
-      //var reg = /\|/;
+      var reg = /\|/;
       let price = product.price.toString().split('.');
 
       const desArr = product.descriptions
-        .split('|')
+        .split(reg)
         .map((description, i) => <li key={i}>{description}</li>);
 
       return (
