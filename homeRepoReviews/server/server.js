@@ -1,8 +1,13 @@
 const express = require('express');
+const cors = require('cors');
+const path = require('path');
+
+const app = express();
+app.use(cors());
+
 
 const connection = require('/Users/studentThirteen/Desktop/masterRepo/homeRepoReviews/db/config.js')
 
-const app = express();
 
 app.use(express.static('dist'));
 
@@ -22,6 +27,11 @@ app.get('/reviews', (req, res) => {
     };
     res.send(results)
   });
+});
+
+app.get('/ok', (req, res) => {
+  // console.log(path.join(`${__dirname}/../dist/bundle.js`));
+  res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
 });
 
 const port = 5000;
