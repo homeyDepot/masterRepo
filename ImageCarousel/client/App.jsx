@@ -52,6 +52,11 @@ class App extends React.Component {
         <img id='img' src = {product.img} alt='abc'></img>
          <div id='name'> {product.name}</div>
          <div id='priceFormat'> ${product.price} </div>
+         <div className="product-price">
+            <span className="product-price-small">$</span>
+            <span className="product-price-large">{product.price}</span>
+            <span className="product-price-small">{}</span>
+          </div>
            <div id='desc'>  {product.description} </div> 
        </div>
       ))}
