@@ -9,7 +9,7 @@ app.use(express.static('dist'))
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'password'
+  password : 'password',
   database: 'item_list'
 });
  
@@ -46,7 +46,11 @@ app.get('/products', (req,res) => {
         }
     }) 
   });
-
+  app.get('/products', (req, res) => {
+    // console.log(path.join(`${__dirname}/../dist/bundle.js`));
+    res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
+  });
+ 
 
 
 
