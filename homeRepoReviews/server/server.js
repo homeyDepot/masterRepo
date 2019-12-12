@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 
-const connection = require('/Users/studentThirteen/Desktop/masterRepo/homeRepoReviews/db/config.js')
+const connection = require('../db/config')
 
 
 app.use(express.static('dist'));
