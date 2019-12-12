@@ -1,9 +1,12 @@
 const express = require('express');
 const mysql     = require('mysql');
+const morgan = require('morgan')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 30013;
+
+app.use(morgan('dev'))
 
 app.use(express.static('dist'))
 var connection = mysql.createConnection({
