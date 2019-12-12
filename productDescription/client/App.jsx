@@ -21,14 +21,14 @@ class App extends Component {
     let id = this.state.query
     if (!id){id = 1}
     const url = 'http://localhost:3001/product/'
-    console.log(url+id)
+    // console.log(url+id)
     Axios.get(url+id).then(({ data }) => {
       this.setState({ products: data, query: id});
     });
   }
 
   render() {
-    console.log(this.state.query);
+    // console.log(this.state.query);
     const products = this.state.products.map(product => {
       var reg = /\|/;
       let price = product.price.toString().split('.');
