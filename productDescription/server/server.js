@@ -1,29 +1,31 @@
 //const app = require('./app.js');
 
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+const path = require('path')
 const app = express();
-app.use(cors())
+app.use(cors());
 app.use(express.static('dist'));
 const readDb = require('../db/index');
 const port = process.env.port || '3001';
 
 // console.log(app);
-app.get('/product', async (req, res) => {
-  try {
-    let results = await readDb.readDb.all();
+// app.get('/product', async (req, res) => {
+//   try {
+//     let results = await readDb.readDb.all();
 
-    res.send(results);
-  } catch (e) {
-    console.log(e);
-    res.send('error');
-  }
+//     res.send(results);
+//   } catch (e) {
+//     console.log(e);
+//     res.send('error');
+//   }
 
-  //res.send("okay boomer")
-});
+//   //res.send("okay boomer")
+// });
 
 app.get('/product/:id', async (req, res) => {
   let id = req.path.split('/product/');
+  console.log(id)
 
   try {
     let results = await readDb.readDb.one(Number(id[1]));
@@ -31,6 +33,10 @@ app.get('/product/:id', async (req, res) => {
   } catch (e) {
     console.error(e);
   }
+});
+app.get('/ok', (req, res) => {
+  // console.log(path.join(`${__dirname}/../dist/bundle.js`));
+  res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
 });
 app.listen(port, () => {
   // eslint-disable-next-line no-console

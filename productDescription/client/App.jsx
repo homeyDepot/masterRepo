@@ -12,31 +12,23 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.fetchOne();
   }
-  fetchProducts() {
-    Axios.get('http://localhost:3001/product').then(({ data }) => {
-      // console.log(data)
-      this.setState({ products: data });
-    });
-  }
+  
   fetchOne() {
     // console.log('Yo yo yo', this.state.query);
-    if (this.state.query === '') {
-      this.setState({
-        products: [],
-        query: 1
-      });
-    }
-    // console.log(this.state.query)
-    Axios.get('http://localhost:3001/product/', { id: this.state.query }).then(({ data }) => {
-      this.setState({ products: data });
+    let id = this.state.query
+    if (!id){id = 1}
+    const url = 'http://localhost:3001/product/'
+    console.log(url+id)
+    Axios.get(url+id).then(({ data }) => {
+      this.setState({ products: data, query: id});
     });
   }
 
   render() {
-    // console.log(this.state.products);
+    console.log(this.state.query);
     const products = this.state.products.map(product => {
       var reg = /\|/;
       let price = product.price.toString().split('.');
@@ -79,7 +71,7 @@ class App extends Component {
       );
     });
 
-    return <div className="App">{products}</div>;
+    return <div className="product-min-desc">{products}</div>;
   }
 }
 
