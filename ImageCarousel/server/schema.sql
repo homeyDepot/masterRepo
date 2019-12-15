@@ -9,7 +9,7 @@ CREATE TABLE products(
     id INT AUTO_INCREMENT,
     name text,
     price DECIMAL(19, 2) NOT NULL,
-    description VARCHAR(50),
+    description TEXT,
     PRIMARY Key (id),
     img TEXT
 )

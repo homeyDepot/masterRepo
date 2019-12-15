@@ -37,6 +37,7 @@ class App extends React.Component {
     
   
   render() {
+    
     // const prevArrow = <img id='prevArrow' src='https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png' />
     const nextArrow = <img id='nextArrow' src='./images/Next.png' />
     const settings = {
