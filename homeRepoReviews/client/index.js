@@ -1,7 +1,9 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import ReviewsComp from './App.jsx';
 
 // eslint-disable-next-line no-undef
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<ReviewsComp/>, document.getElementById('ReviewsComp'))
+// ReactDOM.render(<h1>Hello</h1>, document.getElementById('ReviewsComp'))
+

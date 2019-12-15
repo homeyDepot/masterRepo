@@ -3,9 +3,9 @@ import './app.css';
 import { ThumbsUp } from 'react-feather';
 import { ThumbsDown } from 'react-feather';
 
-const Axios = require('axios');
+import Axios from 'axios'
 
-class App extends React.Component {
+class ReviewsComp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,11 +66,11 @@ class App extends React.Component {
         <h4>{this.state.dateReviewed}</h4>
         <h3>{this.state.reviewTitle}</h3>
         <h4>Stars: {this.state.stars}</h4>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
+<span className="fa fa-star checked"></span>
+<span className="fa fa-star"></span>
+<span className="fa fa-star"></span>
+<span className="fa fa-star"></span>
+<span className="fa fa-star"></span>
         <p>{this.state.reviewBody}</p>
         <h5>Value: {this.state.valueRating}</h5>
         <h5>Energy-Efficiency: {this.state.energyRating}</h5>
@@ -88,4 +88,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default ReviewsComp;
