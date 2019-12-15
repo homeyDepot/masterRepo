@@ -33,7 +33,7 @@ class App extends React.Component {
   
   render() {
     // const prevArrow = <img id='prevArrow' src='https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png' />
-    const nextArrow = <img id='nextArrow' src='https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png' />
+    const nextArrow = <img id='nextArrow' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJLfSZZwEo8Scgx5l1W8oJlfX6HUQaUlBTl1vtCX4duiDhzyrb&s' />
     const settings = {
       dots: true,
       infinite: true,
@@ -51,16 +51,17 @@ class App extends React.Component {
          <div id='description' key={product.id}> 
         <img id='img' src = {product.img} alt='abc'></img>
          <div id='name'> {product.name}</div>
-         <div id='priceFormat'> ${product.price} </div>
          <div className="product-price">
             <span className="product-price-small">$</span>
             <span className="product-price-large">{product.price}</span>
-            <span className="product-price-small">{}</span>
           </div>
            <div id='desc'>  {product.description} </div> 
+           <h6>
+             <button id='button' > Add To Cart</button>
+           </h6>
        </div>
       ))}
-           {/* <h5 id='cart'> Add To Cart </h5> */}
+           
        
     </Slider>
     </div>

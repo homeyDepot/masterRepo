@@ -4,11 +4,12 @@
 }
 #Customers {
     color: #333333;
-    text-decoration: underline;
+    text-decoration: underline ;
     text-decoration-color: #EB6133;
     font-size: 3rem;
-    font-family: helvetica-neue-light;
+    font-family: helvetica-neue-light, "Helvetica Neue", Helvetica, Arial, sans-serif;
     justify-content: center;
+    font-weight:400;
    }
 
    #description {
@@ -16,14 +17,18 @@
    }
 
    #nextArrow {
-    color: orange;
+ color:#ffffff;
     position: relative;
-       bottom: 75px;
+       bottom: 150px;
        left: 1350px;
        max-width: 100%;
        width: 150px 150px;
-       background-color: #EB6133;
+       background-color: #ffffff;
        padding: 15px 10px;
+       font-weight: 400;
+       border: 2px solid #CCCCCC;
+       height: 58px;
+       width: 1.5%;
    }
    #prevArrow {
        max-width: 100% ;
@@ -38,6 +43,7 @@
 
    }
    #priceFormat {
+    font-family: helvetica-neue-bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.4rem;
     vertical-align: top;
     line-height: 40px;
@@ -54,4 +60,33 @@
     vertical-align: top;
     line-height: 40px;
     margin: 0 2px;
+}
+.product-price-large {
+	align-self: auto;
+    font-size: 2.5rem;
+    bottom: 400px;
+    left: 50px;
+    /* vertical-align: top; */
+    /* line-height: 40px; */
+    /* margin: 0 2px; */
+}
+#button {
+
+    color: #EB6133;
+    background-color: #ffffff;
+    bottom: 20px;
+    font-weight: 400;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+    font-family: helvetica-neue-bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+    margin: auto;
+
+}
+
+#botton:hover
+{
+background-image:none;
+background-color:#ff00ff;
 }
