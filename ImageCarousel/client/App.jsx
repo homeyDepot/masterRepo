@@ -15,6 +15,14 @@ class App extends React.Component {
     this.fetchProducts();
   }
 
+<<<<<<< HEAD
+   handleClick() {
+      console.log('The link was clicked.');
+  }
+  
+
+ 
+=======
   fetchProducts() {
     Axios.get('http://localhost:30013/products')
       .then(({ data }) => {
@@ -22,15 +30,20 @@ class App extends React.Component {
       })
       .catch(err => console.log(err));
   }
+>>>>>>> master
 
   render() {
     // const prevArrow = <img id='prevArrow' src='https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png' />
+<<<<<<< HEAD
+    const nextArrow = <img id='nextArrow' src='./images/Next.png' />
+=======
     const nextArrow = (
       <img
         id="nextArrow"
         src="https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png"
       />
     );
+>>>>>>> master
     const settings = {
       dots: true,
       infinite: true,
@@ -40,6 +53,37 @@ class App extends React.Component {
       // prevArrow,
       nextArrow
     };
+<<<<<<< HEAD
+  return (
+    <div> 
+    <h2 id='Customers'>  Customers Who Viewed This Item Bought ... </h2>
+    <Slider {...settings}>
+      {this.state.products.map((product) => (
+         <div id='description' key={product.id}> 
+        <img id='img' src = {product.img} alt='abc'></img>
+         <div id='name'> {product.name}</div>
+         <div className="product-price">
+            <span className="product-price-small">$</span>
+            <span className="product-price-large">{product.price}</span>
+          </div>
+           {/* <div id='desc'>  {product.description} </div>  */}
+           <h1>
+             <button onClick={this.handleClick} id='button' > Add To Cart</button>
+           </h1>
+       </div>
+      ))}
+           
+       
+    </Slider>
+    </div>
+        );
+      }
+    }
+    
+    {/* <h1 id='Customers'>  Customers Who Viewed This Item Bought ... </h1> */}
+    
+    {/* {this.state.products.map(product => 
+=======
     return (
       <div className = 'test'>
         <h2 id="Customers"> Customers Who Viewed This Item Bought ... </h2>
@@ -70,6 +114,7 @@ class App extends React.Component {
 
 {
   /* {this.state.products.map(product => 
+>>>>>>> master
     <div id='items' key = {product.id}>
     <h1  key={product.name}> {product.name} ${product.price} {product.description} </h1>
     </div> */
