@@ -1,8 +1,4 @@
-#Description{
-	display: flex;
-	float: right;
-	margin-top: 200px;
-}
+
 .product-min-desc{
 	display: flex-grow;
 	font-family: helvetica-neue,Helvetica Neue,Helvetica,Arial,sans-serif;

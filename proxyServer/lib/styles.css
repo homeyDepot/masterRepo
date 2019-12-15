@@ -1,0 +1,24 @@
+/* *{
+	box-sizing: border-box;
+} */
+#main{
+	background-color: transparent;
+	display: grid | inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+#Description{
+	display: grid;
+	float: right;
+}
+#Carousel{
+	display: grid | inline-grid;
+	margin-top: 1000px;
+	background-coloe: red;
+	color: yellow;
+	
+}
+#ReviewsComp{
+	display: grid;
+}
+
+
