@@ -5,13 +5,15 @@
 
 #main {
 	display: grid;
+	grid-template-columns: 50px 50px 50px 50px 50px;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	}
+}
 	
-	#header { grid-area: 1 / 1 / 2 / 6; }
+	#Header { grid-area: 1 / 1 / 2 / 6; 
+	height: 100px}
 	#picture { grid-area: 2 / 1 / 4 / 4; }
 	#Description{ grid-area: 2 / 4 / 4 / 6; }
 	#Carousel { grid-area: 4 / 1 / 5 / 6; }
