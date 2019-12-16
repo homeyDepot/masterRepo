@@ -2,7 +2,7 @@
     max-width: 57.5%;
     width: 170px 170px
 }
-#Customers {
+h2 {
     color: #333333;
     text-decoration: underline ;
     text-decoration-color: #EB6133;
@@ -10,7 +10,9 @@
     font-family: helvetica-neue-light, "Helvetica Neue", Helvetica, Arial, sans-serif;
     justify-content: center;
     font-weight:400;
+    padding: 0px 0px 3px;
    }
+
 
    #description {
        font-size: 14px;
@@ -89,8 +91,6 @@
     -moz-appearance: none;
 }
 
-/* #botton:hover
-{
-background-image:none;
-background-color:#EB6133;
-} */
+#line {
+    border-top: 1px solid #CCCCCC;
+}
