@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-
+const morgan = require('morgan')
+const port = 5000;
 const app = express();
 app.use(cors());
+
+app.use(morgan('dev'))
 
 
 const connection = require('../db/config')
@@ -29,12 +32,13 @@ app.get('/reviews', (req, res) => {
   });
 });
 
+
 app.get('/reviewsComp', (req, res) => {
   // console.log(path.join(`${__dirname}/../dist/bundle.js`));
   res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
 });
 
-const port = 5000;
+
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

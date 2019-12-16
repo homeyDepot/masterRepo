@@ -9,23 +9,15 @@ app.use(express.static('dist'));
 const readDb = require('../db/index');
 const port = process.env.port || '3001';
 
-// console.log(app);
-// app.get('/product', async (req, res) => {
-//   try {
-//     let results = await readDb.readDb.all();
 
-//     res.send(results);
-//   } catch (e) {
-//     console.log(e);
-//     res.send('error');
-//   }
 
-//   //res.send("okay boomer")
-// });
+var faker = require('faker');
+
+
 
 app.get('/product/:id', async (req, res) => {
   let id = req.path.split('/product/');
-  console.log(id)
+  // console.log(id)
 
   try {
     let results = await readDb.readDb.one(Number(id[1]));

@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "nodemon server/server.js",
     "webpack_dev": "webpack --mode=development --watch",
-    "webpack_build": "webpack --mode=production"
+    "webpack_build": "webpack --mode=production",
+    "evolve": "npm start & npm run webpack_dev"
   },
   "author": "Garrett Welson",
   "license": "ISC",

@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql     = require('mysql');
 const morgan = require('morgan')
+const path = require('path')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
@@ -49,7 +50,7 @@ app.get('/products', (req,res) => {
         }
     }) 
   });
-  app.get('/products', (req, res) => {
+  app.get('/app', (req, res) => {
     // console.log(path.join(`${__dirname}/../dist/bundle.js`));
     res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
   });
