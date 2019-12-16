@@ -11,12 +11,24 @@ class App extends Component {
     super();
     this.state = {
       products: [],
-      query: ''
+      query: '',
+      water:''
     };
   }
 
   componentDidMount() {
+    window.addEventListener('click', this.greet, this.experiment)
     this.fetchOne();
+  }
+  greet(){
+    console.log('What is ',this)
+  }
+
+  experiment(){
+    
+
+    console.log('This is the **',window.water)
+    console.log('The link was clicked.');
   }
 
   fetchOne() {
@@ -37,6 +49,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("from prod",window.water)
     const item = this.state.products;
 
     const fullDescription = () => {
