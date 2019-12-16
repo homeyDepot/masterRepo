@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import {Text} from 'react-native'
+import { BrowserRouter as Router } from 'react-router-dom';
 import Axios from 'axios';
-import  './app.css';
+import './app.css';
 
 class App extends Component {
   constructor() {
@@ -15,15 +15,17 @@ class App extends Component {
   componentWillMount() {
     this.fetchOne();
   }
-  
+
   fetchOne() {
     // console.log('Yo yo yo', this.state.query);
-    let id = this.state.query
-    if (!id){id = 1}
-    const url = 'http://localhost:3001/product/'
+    let id = this.state.query;
+    if (!id) {
+      id = 1;
+    }
+    const url = 'http://localhost:3001/product/';
     // console.log(url+id)
-    Axios.get(url+id).then(({ data }) => {
-      this.setState({ products: data, query: id});
+    Axios.get(url + id).then(({ data }) => {
+      this.setState({ products: data, query: id });
     });
   }
 
@@ -71,7 +73,11 @@ class App extends Component {
       );
     });
 
-    return <div className="product-min-desc">{products}</div>;
+    return (
+      <Router>
+        <div className="product-min-desc">{products}</div>
+      </Router>
+    );
   }
 }
 

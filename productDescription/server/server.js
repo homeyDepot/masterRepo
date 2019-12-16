@@ -9,19 +9,14 @@ app.use(express.static('dist'));
 const readDb = require('../db/index');
 const port = process.env.port || '3001';
 
-// console.log(app);
-// app.get('/product', async (req, res) => {
-//   try {
-//     let results = await readDb.readDb.all();
 
-//     res.send(results);
-//   } catch (e) {
-//     console.log(e);
-//     res.send('error');
-//   }
 
-//   //res.send("okay boomer")
-// });
+var faker = require('faker');
+
+var randomName = faker.name.findName(); // Rowan Nikolaus
+var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
+var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+console.log(randomCard)
 
 app.get('/product/:id', async (req, res) => {
   let id = req.path.split('/product/');
