@@ -8,54 +8,39 @@ IF NOT EXISTS products_list.product
 (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	name TEXT,
-	designer VARCHAR
-(10),
+	designer VARCHAR (25),
 	descriptions TEXT,
-	price DECIMAl
-(19,2)
-	
+	price DECIMAl (19,2),
+    skuid INT
 );
-select FORMAT(price,2)
-from product;
+
 
 INSERT INTO product
-	(name, designer,descriptions,price)
+	(name, designer,descriptions,price,skuid)
 VALUES
-	("Ronin 4-Piece Espresso Bar Table Set",
-		"Safavieh",
-		"4 piece pub set allows for convenient dining.|
-		Versatile piece allows for this set to flourish in any setting.|
-		Functional décor ideal for dining or living room.|
-		The transitional Ronin 4-piece pub table set is the ideal addition to kitchen, studio apartment, family room or entertainment room. Crafted from sturdy Malaysian oak with rich dark espresso finish, it features a table, two low profile barstools and coordinating bench. As a bonus, use it for extra counter space for service during buffets and parties.|
-Crafted with Malaysian Oak|
-Finished In Espresso|
-Minor assembly required|
-Table Dimensions: 24 in. W x 44 in. D x 36 in. H|
-Bench Dimensions: 33 in. W x 13.2 in. D x 24 in. H|
-Counter Stool Dimensions: 17.7 in. W x 14.5 in. D x 24 in. H|
-Seat Dimensions: 33 in. W x 9.5 in. D x 24 in. H|
-Table Footrest Height: 8.3 in. H|
-Chair Footrest Height: 4.3 in. H|
-Table Weight Capacity: 50 lbs.|
-Bench Weight Capacity: 500 lbs.|
-Chair Weight Capacity: 275 lbs.|
-Use felt pads under all articles to prevent discoloration|
-Dust regularly, clean with non- abrasive clean cloth|
-Can be spot cleaned but professional cleaning is strongly recommended|
-Wood is a natural material with variations of color shade, configuration, streaks, and grain structure, each individual piece of Safavieh furniture has characteristic markings that will differ from photo and showroom samples, regular attention and maintenance of fine furniture can ensure its beauty for years to come, always use felt pads under all articles to prevent discoloration or softening of the lacquer, plastic and rubber bases on items can discolor wood|
-60 day Manufacturer Warranty for defects only. Normal wear and tear is not warranted. Visible damages not noted upon delivery will be determined to be customer damage and will not be warranted. Returned items must be in new or unused conditions with the original manufacturers packaging. All products are inspected upon arrival and we do not accept worn, dirty or stained merchandise.|
-Please note: the digital images and product dimensions on our website are as accurate as possible, due to differences in computer monitors, some furniture colors may vary slightly, lengths and widths may vary from the published dimensions, we do our best to provide you with an exact measurement, but please be advised that some variation exists",
-		216.28);
+	("Titian Pine and Painted MDF Antique Tobacco Console Table",
+		"Linon Home Decor",
+		"Our Titian Collection has a simple yet eye-catching design that is matched with incredible durability.| The Console Table features a compact and simple body that makes it perfect for any space.| 2-Drawers provide ample hidden storage space. A neutral, classic Antique Tobacco finish allows this piece to easily complement your homes decor.|
+Simple yet eye-catching design|
+Versatile design|
+2-drawers provide ample storage space|
+Will easily complement your homes decor|
+Drawer dimensions: 34.65 in. x 8.82 in. x 1.97 in., top: 42 in. x 14 in.,| interior dimensions: 36.61 in. x 12.6 in. x 18.66 in.|
+Antique tobacco finish|
+Distance from Floor to Lower Shelf: 4.375 in.|
+California residents",
+		112.69,1001);
 INSERT INTO product
-	(name, designer,descriptions,price)
+	(name, designer,descriptions,price,skuid)
 VALUES
 	("Finwick Gunmetal Gray Metal Square Dining Table for 4 (31.5 in. L x 29.13 in. H)",
-		"StyleWell",
-		"Square dining table.|
-	Farmhouse-style metal base with wood tabletop.|
-	Product Dimensions: 31.5 in W x 31.5 in L x 29.13 in H.|
-	|",
-		111.29)
+		"iRobot",
+		"The Roomba 960 robot vacuum seamlessly navigates room to room to clean an entire level of your home, recharging and resuming until the job is done. Roomba 960 loosens, lifts, and suctions dirt with up to 5x more air power and requires less maintenance. Just press CLEAN or schedule Roomba on the go with the iRobot HOME App.|
+
+Power-Lifting Suction delivers 5X the air power for improved pick-up performance. (Compared to Roomba 600 Series)|
+Intelligently maps and cleans an entire level of your home.| Patented iAdapt 2.0 technology with vSLAM navigation actively captures thousands of precise measurements each millisecond to optimize coverage.|
+Ideal for homes with pets. |",
+		111.29,1002)
 
 
 
