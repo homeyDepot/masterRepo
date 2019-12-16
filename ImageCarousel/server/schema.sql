@@ -11,5 +11,6 @@ CREATE TABLE products(
     price DECIMAL(19, 2) NOT NULL,
     description TEXT,
     PRIMARY Key (id),
-    img TEXT
+    img TEXT, 
+    skuid int
 )

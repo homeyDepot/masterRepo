@@ -43,7 +43,7 @@ class App extends React.Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 6,
+      slidesToShow: 5,
       slidesToScroll: 1,
       // prevArrow,
       nextArrow
@@ -51,7 +51,7 @@ class App extends React.Component {
   return (
     <div> 
     <div>
-    <h2 >  Customers Who Viewed This Item Bought ... </h2>
+    <h2 id="customers" >  Customers Who Viewed This Item Bought ... </h2>
      <hr id="line"></hr>
      </div>
     <Slider {...settings}>

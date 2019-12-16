@@ -2,7 +2,7 @@
     max-width: 57.5%;
     width: 170px 170px
 }
-h2 {
+#customers{
     color: #333333;
     text-decoration: underline ;
     text-decoration-color: #EB6133;
@@ -22,7 +22,7 @@ h2 {
  color:#ffffff;
     position: relative;
        bottom: 155px;
-       left: 1350px;
+       left: 1450px;
        max-width: 140%;
        width: 110px 110px;
        background-color: #ffffff;
