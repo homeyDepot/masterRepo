@@ -6,7 +6,7 @@
     color: #333333;
     text-decoration: underline ;
     text-decoration-color: #EB6133;
-    font-size: 3rem;
+    font-size: 40px;
     font-family: helvetica-neue-light, "Helvetica Neue", Helvetica, Arial, sans-serif;
     justify-content: center;
     font-weight:400;
@@ -31,6 +31,9 @@
        height: 100px;
        width: 2.5%;
    }
+   
+
+
    #prevArrow {
        max-width: 100% ;
        width: 150px 150px;
@@ -89,6 +92,10 @@
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+#button:hover {
+    background:#EB6133 ;
+    color: #ffffff;
 }
 
 #line {
