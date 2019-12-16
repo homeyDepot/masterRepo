@@ -1,0 +1,129 @@
+.topnav {
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    top: -64px;
+   
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the “active” element to highlight the current page */ */
+   .topnav a.active {
+    background-color: #ddd;
+    color: white;
+  } 
+  
+
+
+  .mainform {
+    display: inline;
+    inline-size: 6px;
+    padding: 5px;
+    margin: 0px;
+    display: block;
+    position: relative;
+    height: 100px;
+    left: -150px;
+  }
+  
+  
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      float: none;
+      display: block;
+      text-align: right;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+  .MyAccount{
+    position:relative;
+    right:-1032px;
+    top: -255px;
+    margin: 0px;
+    }
+
+     
+    .cart{
+        position: relative;
+        right:-1250px;
+        top: -320px;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .text{
+        font: 40px;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        border: 1px solid red;
+    }
+    .AccountIcon{
+      position:relative;
+      right:-1127px;
+      top: -282px;
+      margin: 0px;
+      height: 30px;
+    }
+    #headerSearch{
+      position: relative;
+      right:-450px;
+      top: -230px;
+      font: 20px;
+      padding: 10px;
+      height: 14px;
+    }
+
+    .logo{
+      position: relative;
+      height: 130px;
+      font-style: normal;
+      font: 40px;
+      top: -64px;
+      left: -67px;
+    }
+
+    .searchButton{
+      height: 40px;
+      position: relative;
+      /* height: 130px; */
+      font-style: normal;
+      font: 40px;
+      top: -226px;
+      right: -933px;
+    }
+
+    .Mycart{
+      position: relative;
+      right:-1340px;
+      top: -363px;
+      font: 14px;
+      padding: 10px;
+      height: 26px;
+      width: 26px;
+  }
+
+  .container{
+    grid-auto-columns: auto;
+  }
