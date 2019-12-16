@@ -32,7 +32,8 @@ app.get('/reviews', (req, res) => {
   });
 });
 
-app.get('/reviewComp', (req, res) => {
+
+app.get('/reviewsComp', (req, res) => {
   // console.log(path.join(`${__dirname}/../dist/bundle.js`));
   res.sendFile(path.join(`${__dirname}/../dist/bundle.js`));
 });
