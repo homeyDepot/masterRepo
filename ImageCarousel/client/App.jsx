@@ -50,7 +50,10 @@ class App extends React.Component {
     };
   return (
     <div> 
-    <h2 id='Customers'>  Customers Who Viewed This Item Bought ... </h2>
+    <div>
+    <h2 >  Customers Who Viewed This Item Bought ... </h2>
+     <hr id="line"></hr>
+     </div>
     <Slider {...settings}>
       {this.state.products.map((product) => (
          <div id='description' key={product.id}> 
