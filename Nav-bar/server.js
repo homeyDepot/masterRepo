@@ -1,7 +1,16 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const cors = require('cors')
+const path = require('path')
+app.use(cors())
+const port = 3002;
 
 app.use(express.static('dist'));
+
+app.get('/Header', (req, res) => {
+	// console.log(path.join(`${__dirname}/../dist/bundle.js`));
+	
+	res.sendFile(path.join(`${__dirname}/dist/bundle.js`));
+  });
 
 app.listen(port, () => console.log(`listening from port: ${port}`));

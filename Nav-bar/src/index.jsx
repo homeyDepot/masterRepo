@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from'./app.jsx';
+import Header from'./app.jsx';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Header />, document.getElementById('Header'));
+// ReactDOM.render(<h1 >THBHKASJbå</h1>, document.getElementById('Header'));
