@@ -21,12 +21,11 @@ class ReviewsComp extends React.Component {
       reviewsList: [],
       isToggleOn: false
     };
-    // this.handleClick = this.handleClick.bind(this);
+     this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.fetchData();
-    // this.handleClick();
   }
   fetchData() {
     Axios.get('http://localhost:5000/reviews')
@@ -39,13 +38,19 @@ class ReviewsComp extends React.Component {
       //   console.log(err);
       // })
   }
-// handleClick(event) {
-  
-// }
+ handleClick() {
+  this.setState(state => ({
+    isToggleOn: !state.isToggleOn
+  }));
+ }
+
+ handleChange(e) {
+  console.log(e.target.value)
+ }
 
 
   render() {
-    console.log(this.state)
+    //console.log(this.state)
   
   return (
     <div>
@@ -73,8 +78,8 @@ class ReviewsComp extends React.Component {
   <span className="fa fa-star"></span> */}
       
      
-      
-      <ReviewForm  />
+      <h2 onClick={this.handleClick}>Write a review!</h2>
+{this.state.isToggleOn &&  <ReviewForm  /> }
 
     </div>
   ); 
