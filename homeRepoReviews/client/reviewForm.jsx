@@ -1,11 +1,10 @@
 import React from 'react'
 
 const ReviewForm = (props) => {
-    console.log(props)
+    //console.log(props)
 
     return (
        <div>
-           <h1>Write a review!</h1>
             <form>
               <h3>
                   Name:  
@@ -13,7 +12,7 @@ const ReviewForm = (props) => {
               </h3>
               <h3>
                   Date: 
-                  <input type='text' date='date' />
+                  <input type='date' date='date' />
               </h3>
               <h3>
                   Stars: 
@@ -27,6 +26,7 @@ const ReviewForm = (props) => {
                   Review: 
               <textarea rows='8' cols='50' />
             </h3>
+            <button>Submit</button>
                   
              
 
