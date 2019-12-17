@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -d -w",
     "compile": "webpack-dev-server -d",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "evolve": "npm start & npm run build"
   },
   "author": "Salinas",
   "license": "ISC",

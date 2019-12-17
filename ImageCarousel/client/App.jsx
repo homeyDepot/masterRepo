@@ -53,7 +53,7 @@ class App extends React.Component {
     };
     return (
       <div>
-        <div>
+        <div className = 'carrcarr'>
           <h2 id="customers"> Customers Who Viewed This Item Bought ... </h2>
           <hr id="line"></hr>
         </div>

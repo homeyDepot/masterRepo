@@ -21,20 +21,6 @@ class App extends Component {
     window.addEventListener('click', this.greet, this.experiment)
     this.fetchOne();
   }
-<<<<<<< HEAD
-=======
-  greet(){
-    console.log('What is ',this)
-  }
-
-  experiment(){
-    
-
-    console.log('This is the **',window.water)
-    console.log('The link was clicked.');
-  }
-
->>>>>>> d0fe344ddddaf34803afb8489b99feb2ff257cd6
   fetchOne() {
     // console.log('Yo yo yo', this.state.query);
     let id = this.state.query;
@@ -52,11 +38,7 @@ class App extends Component {
     console.log(window.onclick);
   }
   render() {
-<<<<<<< HEAD
-    // console.log(window)
-=======
-    console.log("from prod",window.water)
->>>>>>> d0fe344ddddaf34803afb8489b99feb2ff257cd6
+    
     const item = this.state.products;
 
     return (
