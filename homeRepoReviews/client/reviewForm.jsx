@@ -1,24 +1,38 @@
 import React from 'react'
 
 const ReviewForm = (props) => {
-    
-    return (
-        <div>
+    console.log(props)
 
-        <form>
-             <br>Name: </br>
-             <br> <input type='text'></input></br>
-             <br> Date: </br>
-             <br> <input type='text'></input> </br>
-             <br> Stars: </br>
-             <br> <input type='number'></input> </br>
-             <br> Review Title: </br>
-             <br> <input type='text'></input> </br>
-             <br> Review: </br>
-             <br> <input type='text'></input> </br>
+    return (
+       <div>
+           <h1>Write a review!</h1>
+            <form>
+              <h3>
+                  Name:  
+                  <input type='text' name='name' />
+              </h3>
+              <h3>
+                  Date: 
+                  <input type='text' date='date' />
+              </h3>
+              <h3>
+                  Stars: 
+                  <input type='number' name='stars' />
+              </h3>
+              <h3>
+                  Review Title: 
+                  <input type='text' name='title' />
+              </h3>
+              <h3>
+                  Review: 
+              <textarea rows='8' cols='50' />
+            </h3>
+                  
+             
 
         </form>
-        </div>
+       </div>
+        
         )
 }
 
