@@ -8,7 +8,7 @@
     "start": "nodemon server/server.js",
     "apple": "webpack --mode=development --watch --display-error-details=true",
     "webpack_build": "webpack --mode=production",
-    "evolve":"npm start & npm run apple"
+    "evolve": "npm start & npm run apple"
   },
   "author": "Garrett Welson",
   "license": "ISC",
