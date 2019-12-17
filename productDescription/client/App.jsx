@@ -34,9 +34,11 @@ class App extends Component {
 
   handleScroll(){
     console.log('yo yo')
+    console.log(window.onclick)
   }
 
   render() {
+    // console.log(window)
     const item = this.state.products;
 
     const fullDescription = () => {
@@ -82,7 +84,8 @@ class App extends Component {
           <div className="product-minDescription">
             {minDesc}
 
-            <Link to={`/fullDescription`} className="fullDescription">
+            <Link to={`/fullDescription`} className="fullDescription" 
+            onClick = {this.handleScroll.bind(this)}>
               <div>See Full Description</div>
             </Link>
           </div>
