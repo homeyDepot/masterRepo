@@ -96,7 +96,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-#button:hover {
+.addCartButton:hover {
     background:#EB6133 ;
     color: #ffffff;
 }
