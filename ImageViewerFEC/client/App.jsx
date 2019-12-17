@@ -7,24 +7,34 @@ class App extends React.Component {
     super(props);
     this.state = {
       test_pic : [],
-      currentImage : ''
+      currentImage : '',
+      query: 1001
     };
   }
 
   componentDidMount() {
-    this.getImages();
+    window.addEventListener('hello', (e)=>{
+      this.setState({query: Number(e.detail)})
+      this.getImages(this.state.query);
+    })
+    this.getImages(this.state.query)
   }
 
-  getImages() {
-    Axios.get("http://localhost:3014/test_pic")
-      .then(({ data }) => {
-        this.setState({ test_pic: data });
-          // this.state.test_pic.map((currentImage) => {
-          //   this.setState({currentImage: test_pic.img})
 
-          // })
+  getImages(ok) {
+    const url = "http://localhost:3014/test_pic/"
+    Axios.get(url + ok)
+      .then(({ data }) => {
+        this.setState({ test_pic: data});
     });
   }
+      //   .then(({ data }) => {
+      //     this.setState({ test_pic: data });
+      //       // this.state.test_pic.map((currentImage) => {
+      //       //   this.setState({currentImage: test_pic.img})
+  
+      //       // })
+      // });
 
 
   handleClick(arg) {
@@ -34,10 +44,6 @@ class App extends React.Component {
 
 
   render() {
-
-    
-
-    
     return (
      <div>
           <div className='main'>
