@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import Axios from 'axios';
-
-// import FullDescription from './components/FullDescription'
 import './app.css';
+// import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Axios from 'axios';
 import MinDescription from './components/MinDescription.jsx';
+import Price from './components/Price.jsx';
+import Header from './components/Header.jsx';
+import Advertise from './components/Advertise.jsx'
+import AddToCart from './components/AddToCart.jsx'
 
 class App extends Component {
   constructor() {
@@ -14,11 +16,9 @@ class App extends Component {
       query: ''
     };
   }
-
   componentDidMount() {
     this.fetchOne();
   }
-
   fetchOne() {
     // console.log('Yo yo yo', this.state.query);
     let id = this.state.query;
@@ -31,84 +31,51 @@ class App extends Component {
       this.setState({ products: data, query: id });
     });
   }
-
-  handleScroll(){
-    console.log('yo yo')
-    console.log(window.onclick)
+  handleScroll() {
+    console.log('yo yo');
+    console.log(window.onclick);
   }
-
   render() {
     // console.log(window)
     const item = this.state.products;
 
-    const fullDescription = () => {
-      return  item.map((descriptions, i) => {
-        return descriptions.descriptions.split('|').map((el, i) => {
-          document.getElementById('')
-          return <li key = {i}>{el}</li>;
-        });
-      });
-    };
-
-    const products = item.map(product => {
-      let price = product.price.toString().split('.');
-
-      const descriptionArr = product.descriptions.split('|');
-
-      let minDescription = descriptionArr.filter((description, i) => {
-        if (i < 3) {
-          return description;
-        }
-      });
-
-      let minDesc = minDescription.map((el, i) => <li key={i}>{el}</li>);
-
-      return (
-        <div className="product-info" key={product.id}>
-          <div className="product-header">
-            <div className="product-title">
-              <h1>{product.name}</h1>
-            </div>
-            <div className="product-designer">
-              <span style={{ fontWeight: 'bold' }}>{product.designer} </span>
-              <img src="https://assets.homedepot-static.com/images/v1/caret-orange.svg"></img>
-            </div>
-          </div>
-          <div className="FrankyAndJuliusDoYourShit">
-            <div className="FrankyComponent">StarPlaceholder </div>
-            <div className="JuliusComponent">Write a review Placeholder </div>
-            <div className="FrankyComponent">Q & A placeholder </div>
-          </div>
-          <div id = 'experiment'>experiment</div>
-
-          <div className="product-minDescription">
-            {minDesc}
-
-            <Link to={`/fullDescription`} className="fullDescription" 
-            onClick = {this.handleScroll.bind(this)}>
-              <div>See Full Description</div>
-            </Link>
-          </div>
-
-          <div className="product-price">
-            <span className="product-price-small">$</span>
-            <span className="product-price-large">{price[0]}</span>
-            <span className="product-price-small">{price[1]}</span>
-          </div>
-        </div>
-      );
-    });
-    
-
     return (
-      <Router>
-        <div className="product-min-desc">{products}</div>
+      <div className="product-min-desc">
+        {item.map(product => (
+          <Header
+            key={product.skuid}
+            id={product.skuid}
+            name={product.name}
+            designer={product.designer}
+            price={product.price}
+          />
+        ))}
+
+        {item.map(product => (
+          <MinDescription key={product.skuid} descriptions={product.descriptions} />
+        ))}
+        <div className="fullDescription">
+          FullDescription
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+
+        {item.map(product => (
+          <Price key={product.skuid} price={product.price} />
+        ))}
+
+        {item.map((product)=>(
+          <Advertise price = {product.price}/>
+        ))}
+
+        <AddToCart/>
         
+
         
-        <Route path="/fullDescription" component={fullDescription}  />
-      </Router>
+      </div>
     );
   }
 }
-
 export default App;
