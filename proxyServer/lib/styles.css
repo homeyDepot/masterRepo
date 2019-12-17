@@ -5,7 +5,7 @@
 #Header { 
 	grid-row-end: span 1;
 }
-#picture { grid-area: b; }
+#Pictures { grid-area: b; }
 	#Description{ grid-area: c; }
 	#Together{ grid-area: d;}
 	#Carousel { grid-area: e; }

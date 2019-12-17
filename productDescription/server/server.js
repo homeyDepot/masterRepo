@@ -9,12 +9,6 @@ app.use(express.static('dist'));
 const readDb = require('../db/index');
 const port = process.env.port || '3001';
 
-
-
-var faker = require('faker');
-
-
-
 app.get('/product/:id', async (req, res) => {
   let id = req.path.split('/product/');
   console.log(id)

@@ -15,6 +15,7 @@ class Header extends Component {
 
  }
   render() {
+    console.log('IamStateFromGbenga',this.state)
         return (
             <div>
                 <div className="topnav">
