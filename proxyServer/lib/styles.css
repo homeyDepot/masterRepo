@@ -29,47 +29,10 @@
 	width: 100%
 }
 #Carousel{
-	margin-top: -150px
+	 margin-top: -180px 
 }
 
 
-
-	
-	
-
-/* #main{
-	display: grid;
-	grid: 100px auto / repeat(2, 1fr);
-	grid-template-areas:
-		 "header header "
-		 "picture Description"
-		 "Carousel"
-		 "Reviews";
-	grid-gap: 20px;
-}
-#picture{
-	grid-area: picture;
-
-}
-#Description{
-	grid-area: Description;
-	background-color: yellow;
-	display: grid;
-	float: right;
-}
-#Carousel{
-	grid-area: Carousel;
-	display: grid;
-	margin-top: 100px;
-	background-color: red;
-	
-}
-#ReviewsComp{
-	display: grid;
-	background-color: green;
-}
-
- */
 
  #footer {
 	position: absolute;
