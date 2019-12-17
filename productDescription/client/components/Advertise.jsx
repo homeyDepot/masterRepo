@@ -1,16 +1,16 @@
 import React from 'react';
 
 const Advertise = ({ price }) => {
-  
   if (price < 100) {
-    let shippingCharge = 19.95;
+    var shippingCharge = '$ 19.95';
+  } else {
+    shippingCharge = 'Free'
   }
 
   let protectionPlanCharge = Math.floor(price * 0.2);
 
-
   const creditCard = (
-    <div className="applyCard">
+    <div key = {Math.random()}className="applyCard">
       <div className="credit-card">Placeholder</div>
       <div>
         <strong>
@@ -41,7 +41,14 @@ const Advertise = ({ price }) => {
     </label>
   );
 
-  return <div key = {price}>{creditCard}{protectionPlan}</div>;
+  return (
+    <div key={price}>
+    <div>Shipping Charge for this product is {shippingCharge}<br/></div>
+      <div>{creditCard}</div>
+      
+      <div>{protectionPlan}</div>
+    </div>
+  );
 };
 
 export default Advertise;
