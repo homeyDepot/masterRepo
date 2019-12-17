@@ -2,8 +2,9 @@ import React from 'react';
 import './app.css';
 import { ThumbsUp } from 'react-feather';
 import { ThumbsDown } from 'react-feather';
+import ReviewList from './reviewList.jsx';
 
-import Axios from 'axios'
+import Axios from 'axios';
 
 class ReviewsComp extends React.Component {
   constructor(props) {
@@ -14,11 +15,10 @@ class ReviewsComp extends React.Component {
       reviewBody: '',
       stars: null,
       dateReviewed: '',
-      valueRating: null,
-      energyRating: null, 
-      qualityRating: null,
+      totalStars: null,
       helpful: null,
-      notHelpful: null
+      notHelpful: null,
+      reviewsList: []
     };
   }
 
@@ -30,8 +30,13 @@ class ReviewsComp extends React.Component {
   fetchData() {
     Axios.get('http://localhost:5000/reviews')
     .then(({data}) => {
-      console.log(data)
-    })
+      // console.log(data)
+      this.setState({reviewsList: data})
+      // console.log(this.state.reviewsList)
+      })
+      // .catch((err) => {
+      //   console.log(err);
+      // })
   }
 
   getBasicReview() {
@@ -43,13 +48,11 @@ class ReviewsComp extends React.Component {
         reviewBody: data[0].review_body,
         stars: data[0].stars,
         dateReviewed: data[0].date_reviewed,
-        valueRating: data[0].value_rating,
-        energyRating: data[0].energy_efficiency_rating,
-        qualityRating: data[0].quality_rating,
+        totalStars: data[0].totalStars,
         helpful: data[0].helpful,
         notHelpful: data[0].not_helpful
       });
-      console.log(this.state);
+      // console.log(this.state);
     })
   }
 
@@ -57,12 +60,11 @@ class ReviewsComp extends React.Component {
     return (
       <div>
         <h1>
-          Hello, world! It&apos;s Home Repo's Reviews
-          <span role="img" aria-label="100 Emoji and face with sunglasses emoji">
-            💯😎
-          </span>
+          Reviews:
         </h1>
-        <h2>{this.state.reviewer}</h2>
+
+        <ReviewList items={this.state.reviewsList} />
+        {/* <h2>{this.state.reviewer}</h2>
         <h4>{this.state.dateReviewed}</h4>
         <h3>{this.state.reviewTitle}</h3>
         <h4>Stars: {this.state.stars}</h4>
@@ -72,15 +74,12 @@ class ReviewsComp extends React.Component {
 <span className="fa fa-star"></span>
 <span className="fa fa-star"></span>
         <p>{this.state.reviewBody}</p>
-        <h5>Value: {this.state.valueRating}</h5>
-        <h5>Energy-Efficiency: {this.state.energyRating}</h5>
-        <h5>Quality: {this.state.qualityRating}</h5>
         <div>
           <ThumbsUp />
           <span id="helpfulRating"> {this.state.helpful} </span>
           <ThumbsDown />
           <span id="notHelpfulRating"> {this.state.notHelpful}</span>
-        </div>
+        </div> */}
         
 
       </div>
