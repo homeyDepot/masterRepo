@@ -4,7 +4,7 @@ class Home extends Component{
     render(){
       return(
             <div>
-              <h1 class="fbt" >Frequently Bought Together</h1>
+              <h1 className="fbt" >Frequently Bought Together</h1>
               
             
             </div>
