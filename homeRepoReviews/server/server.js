@@ -6,7 +6,7 @@ const port = 5000;
 const app = express();
 app.use(cors());
 
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 
 
 const connection = require('../db/config')
@@ -16,15 +16,12 @@ app.use(express.static('dist'));
 
 connection.connect();
 
-connection.query('SELECT reviewer FROM reviews', function (error, results) {
-  if (error){
-    console.log(error);
-  };
-  console.log('Db connected');
-});
 
-app.get('/reviews', (req, res) => {
-  connection.query('SELECT * FROM reviews', function (error, results) {
+app.get('/reviews/:id', (req, res) => {
+  console.log('I am path',req.path)
+  let id = req.path.split('/reviews/')
+  console.log(id)
+  connection.query(`SELECT * FROM reviews where skuid =${id[1]} `, function (error, results) {
     if (error){
       console.log('This is wrong: ' + error);
     };
