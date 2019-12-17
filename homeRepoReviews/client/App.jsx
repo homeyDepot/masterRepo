@@ -2,7 +2,7 @@ import React from 'react';
 import './app.css';
 import { ThumbsUp } from 'react-feather';
 import { ThumbsDown } from 'react-feather';
-import ReviewList from './reviewList.jsx';
+import ReviewForm from './reviewForm.jsx';
 
 import Axios from 'axios';
 
@@ -25,6 +25,7 @@ class ReviewsComp extends React.Component {
   componentDidMount() {
     this.fetchData();
     this.getBasicReview();
+    this.handleClick();
   }
 
   fetchData() {
@@ -32,7 +33,7 @@ class ReviewsComp extends React.Component {
     .then(({data}) => {
       // console.log(data)
       this.setState({reviewsList: data})
-      // console.log(this.state.reviewsList)
+       console.log(this.state.reviewsList)
       })
       // .catch((err) => {
       //   console.log(err);
@@ -55,6 +56,12 @@ class ReviewsComp extends React.Component {
       // console.log(this.state);
     })
   }
+handleClick() {
+  return (
+    <ReviewForm />
+  )
+}
+
 
   render() {
     return (
@@ -62,8 +69,20 @@ class ReviewsComp extends React.Component {
         <h1>
           Reviews:
         </h1>
-
-        <ReviewList items={this.state.reviewsList} />
+        {this.state.reviewsList.map((review, index) => (
+          <div key={index}> 
+      <h2>{review.reviewer}</h2>
+        <h4>{review.date_reviewed}</h4>
+      <h3>{review.review_title}</h3>
+        <h4>Stars: {review.stars}</h4>
+      <p>{review.review_body}</p>
+      <ThumbsUp /> 
+        <span>  {review.helpful} </span>
+        <ThumbsDown /> 
+  <span>  {review.not_helpful}  </span>
+      </div>
+        ))}
+        {/* <ReviewList items={this.state.reviewsList} /> */}
         {/* <h2>{this.state.reviewer}</h2>
         <h4>{this.state.dateReviewed}</h4>
         <h3>{this.state.reviewTitle}</h3>
@@ -81,7 +100,7 @@ class ReviewsComp extends React.Component {
           <span id="notHelpfulRating"> {this.state.notHelpful}</span>
         </div> */}
         
-
+        <h6 onClick={this.handleClick.bind(this)}>Write a review!</h6>
       </div>
     );
   }
