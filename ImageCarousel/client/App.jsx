@@ -50,7 +50,9 @@ class App extends React.Component {
       <div>
           <h2 id="customers"> Customers Who Viewed This Item Bought ... </h2>
           <hr id="line"></hr>
-        <Slider {...settings} >
+        
+        <Slider {...settings}>
+        
           {this.state.products.map(product => (
             <div className="description" id={product.skuid} key={product.skuid} onClick={this.handleClick}>
               <p>{product.skuid}</p>
@@ -72,18 +74,11 @@ class App extends React.Component {
         </Slider>
       </div>
     );
+        
   }
 }
 
-{
-  /* <h1 id='Customers'>  Customers Who Viewed This Item Bought ... </h1> */
-}
 
-{
-  /* {this.state.products.map(product => 
-    <div id='items' key = {product.id}>
-    <h1  key={product.name}> {product.name} ${product.price} {product.description} </h1>
-    </div> */
-}
+
 
 export default App;
