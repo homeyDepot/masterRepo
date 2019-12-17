@@ -14,10 +14,13 @@ const AddToCart = () => {
     }
   };
   const handleAddToCart = (e) => {
-
-    const cartEvent = new CustomEvent('addToCart', {details: quantity})
+    console.log(quantity)
+    const cartEvent = new CustomEvent('addToCart', {detail: quantity})
     window.dispatchEvent(cartEvent)
+    console.log('I am cartEvent', cartEvent)
   };
+
+  
   return (
     <div className = 'cartWrapper'>
      

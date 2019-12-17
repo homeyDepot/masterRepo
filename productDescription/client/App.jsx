@@ -25,20 +25,14 @@ class App extends Component {
     this.fetchOne(this.state.query)
   }
   fetchOne(ok) {
-    console.log('IamOk',ok)
     const url = 'http://localhost:3001/product/';
-     console.log(url+ok)
     Axios.get(url + ok).then(({ data }) => {
       this.setState({ products: data});
     });
   }
 
   render() {  
-    
     const item = this.state.products;
-
-    console.log('I am item', item)
-
     return (
       <div className="product-min-desc">
         {item.map(product => (
