@@ -14,8 +14,9 @@ const AddToCart = () => {
     }
   };
   const handleAddToCart = (e) => {
-    let count = 0;
-    console.log('add to cart ', count++);
+
+    const cartEvent = new CustomEvent('addToCart', {details: quantity})
+    window.dispatchEvent(cartEvent)
   };
   return (
     <div className = 'cartWrapper'>
@@ -30,7 +31,7 @@ const AddToCart = () => {
 			handleAddToCart();
         }}
       >
-        <span className="addToCartTXT">AddToCart</span>
+        <span className="addToCartTXT" >AddToCart</span>
       </button>
     </div>
   );

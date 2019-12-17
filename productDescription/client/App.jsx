@@ -3,6 +3,7 @@ import './app.css';
 // import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Axios from 'axios';
 import MinDescription from './components/MinDescription.jsx';
+// import FullDescription from './components/FullDescription.jsx'
 import Price from './components/Price.jsx';
 import Header from './components/Header.jsx';
 import Advertise from './components/Advertise.jsx'
@@ -22,8 +23,6 @@ class App extends Component {
       this.fetchOne(this.state.query);
     })
     this.fetchOne(this.state.query)
-    
-    
   }
   fetchOne(ok) {
     console.log('IamOk',ok)
@@ -55,6 +54,7 @@ class App extends Component {
         {item.map(product => (
           <MinDescription key={product.skuid} descriptions={product.descriptions} />
         ))}
+       
         <div className="fullDescription">
           FullDescription
           <br />
@@ -71,7 +71,7 @@ class App extends Component {
           <Advertise price = {product.price}/>
         ))}
 
-        <AddToCart/>
+        <AddToCart />
         
 
         
