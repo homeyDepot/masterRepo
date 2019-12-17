@@ -27,7 +27,7 @@ readDb.all = () => {
 readDb.one =(id)=>{
 
   return new Promise((resolve, reject)=>{
-    connection.query(`Select *  from product where id =${id}`, (err, results)=>{
+    connection.query(`Select *  from product where skuid =${id}`, (err, results)=>{
       if (err){
         return reject(err)
       }
