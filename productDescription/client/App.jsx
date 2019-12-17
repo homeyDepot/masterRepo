@@ -13,33 +13,32 @@ class App extends Component {
     super();
     this.state = {
       products: [],
-      query: '',
-      water:''
+      query: 1001,
     };
   }
   componentDidMount() {
-    window.addEventListener('click', this.greet, this.experiment)
-    this.fetchOne();
+    window.addEventListener('hello', (e)=>{
+      this.setState({query: Number(e.detail)})
+      this.fetchOne(this.state.query);
+    })
+    this.fetchOne(this.state.query)
+    
+    
   }
-  fetchOne() {
-    // console.log('Yo yo yo', this.state.query);
-    let id = this.state.query;
-    if (!id) {
-      id = 1;
-    }
+  fetchOne(ok) {
+    console.log('IamOk',ok)
     const url = 'http://localhost:3001/product/';
-    // console.log(url+id)
-    Axios.get(url + id).then(({ data }) => {
-      this.setState({ products: data, query: id });
+     console.log(url+ok)
+    Axios.get(url + ok).then(({ data }) => {
+      this.setState({ products: data});
     });
   }
-  handleScroll() {
-    console.log('yo yo');
-    console.log(window.onclick);
-  }
-  render() {
+
+  render() {  
     
     const item = this.state.products;
+
+    console.log('I am item', item)
 
     return (
       <div className="product-min-desc">

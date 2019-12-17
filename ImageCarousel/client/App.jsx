@@ -12,32 +12,27 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('click', this.renderDescription)
+    // window.addEventListener('click', this.renderDescription)
     this.fetchProducts();
   }
 
   fetchProducts() {
     Axios.get('http://localhost:30013/products')
       .then(({ data }) => {
-        console.log(data);
+        // console.log(data);
         this.setState({ products: data });
       })
       .catch(err => console.log(err));
   }
 
-  handleClick() {
-    // const test = window.document.getElementById('description')
-    // console.log('This is the $',test)
-    // console.log('The link was clicked.');
+  handleClick(skuId) {
+    let test = skuId.target.id;
+    const event = new CustomEvent('hello', {
+      detail: test
+    });
+    window.dispatchEvent(event);
   }
 
-  renderDescription(e) {
-    window.water = e.target.id
-    // console.log(e.target.id);
-    // const test = e.target.id
-    // console.log('This is the $',test)
-    // console.log('The link was clicked.');
-  }
 
   render() {
     // const prevArrow = <img id='prevArrow' src='https://cdn1.iconfinder.com/data/icons/mixed-17/16/icon_right_rounded-512.png' />
@@ -53,15 +48,13 @@ class App extends React.Component {
     };
     return (
       <div>
-        <div className = 'carrcarr'>
           <h2 id="customers"> Customers Who Viewed This Item Bought ... </h2>
           <hr id="line"></hr>
-        </div>
+        
         <Slider {...settings}>
         
           {this.state.products.map(product => (
-            <div className = 'description' id={product.skuid} key={product.skuid} 
-            onClick={e => this.renderDescription(e)}>
+            <div className="description" id={product.skuid} key={product.skuid} onClick={this.handleClick}>
               <p>{product.skuid}</p>
               <img id="img" src={product.img} alt="abc"></img>
               <div id="name"> {product.name}</div>
@@ -71,7 +64,7 @@ class App extends React.Component {
               </div>
               {/* <div id='desc'>  {product.description} </div>  */}
               <h1>
-                <button onClick={this.handleClick} id="button">
+                <button  className="addCartButton" id={product.skuid} onClick={this.sendToCart}>
                   {' '}
                   Add To Cart
                 </button>
@@ -81,18 +74,11 @@ class App extends React.Component {
         </Slider>
       </div>
     );
+        
   }
 }
 
-{
-  /* <h1 id='Customers'>  Customers Who Viewed This Item Bought ... </h1> */
-}
 
-{
-  /* {this.state.products.map(product => 
-    <div id='items' key = {product.id}>
-    <h1  key={product.name}> {product.name} ${product.price} {product.description} </h1>
-    </div> */
-}
+
 
 export default App;
