@@ -1,23 +1,18 @@
-////WIP
+import React from 'react';
 
+const MinDescription = ({ descriptions }) => {
+  let minDescription = descriptions.split('|').filter((description, i) => {
+    if (i < 3) {
+      return description;
+    }
+  });
+  return (
+    <div className="product-minDescription">
+      <li key="0">{minDescription[0]}</li>
+      <li key="1">{minDescription[1]}</li>
+      <li key="2">{minDescription[2]}</li>
+    </div>
+  );
+};
 
-// import React from 'react'
-
-//  const MinDescription = ({item})=> {
-	
-// 	let a = item.map((product)=>{
-// 		let price = product.price.toString().split('.');
-// 		console.log(price)
-// 	})
-// 	console.log(a)
-// 	return (
-// 		<div>
-// 		test
-			
-// 		</div>
-// 	)
-// }
-
-
-
-//export default MinDescription
+export default MinDescription;
