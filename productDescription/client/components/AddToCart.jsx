@@ -14,10 +14,8 @@ const AddToCart = () => {
     }
   };
   const handleAddToCart = (e) => {
-    console.log(quantity)
     const cartEvent = new CustomEvent('addToCart', {detail: quantity})
     window.dispatchEvent(cartEvent)
-    console.log('I am cartEvent', cartEvent)
   };
 
   

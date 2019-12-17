@@ -1,9 +1,7 @@
 const app = require('./app.js');
+const port ='3014';
 
-const host = process.env.host || '0.0.0.0';
-const port = process.env.port || '3014';
-
-app.listen(port, host, () => {
+app.listen(port,  () => {
   // eslint-disable-next-line no-console
-  console.log(`Now listening on ${host}:${port}`);
+  console.log(`Now listening on${port}`);
 });
