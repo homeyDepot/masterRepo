@@ -6,7 +6,7 @@ import ReviewForm from './reviewForm.jsx';
 
 import Axios from 'axios';
 
-class ReviewsComp extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,16 +19,25 @@ class ReviewsComp extends React.Component {
       helpful: null,
       notHelpful: null,
       reviewsList: [],
-      isToggleOn: false
+      isToggleOn: false,
+      query: 1001
     };
      this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    this.fetchData();
+
+    window.addEventListener('hello', (e)=>{
+      this.setState({query: Number(e.detail)})
+      this.fetchData(this.state.query);
+    })
+    this.fetchData(this.state.query)
+  
   }
-  fetchData() {
-    Axios.get('http://localhost:5000/reviews')
+  fetchData(ok) {
+    console.log("IamOkfromreview",ok)
+    const url = 'http://localhost:5000/reviews/'
+    Axios.get(url+ok)
     .then(({data}) => {
       // console.log(data)
       this.setState({reviewsList: data})
@@ -89,4 +98,4 @@ class ReviewsComp extends React.Component {
   }
 }
 
-export default ReviewsComp;
+export default App;
