@@ -1,3 +1,6 @@
+body{
+  display: grid;
+}
 .topnav {
     overflow: hidden;
     background-color: white;
