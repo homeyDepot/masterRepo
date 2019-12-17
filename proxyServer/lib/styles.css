@@ -2,53 +2,41 @@
 	box-sizing: border-box;
 } */
 
+#Header { 
+	grid-row-end: span 1;
+}
+#picture { grid-area: b; }
+	#Description{ grid-area: c; }
+	#Together{ grid-area: d;}
+	#Carousel { grid-area: e; }
+	#ReviewsComp { grid-area: f; }
+
 
 #main {
 	display: grid;
-	grid-template-columns: 50px 50px 50px 50px 50px;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+	grid-template-columns: repeat(2,2fr);
+	grid-template-rows: 10% 30% 30% 10% 20%;
+	grid-template-areas: 
+	"a ."
+	"b c"
+	"d d"
+	"e e"
+	"f f"
+	;
 }
-	
-	#Header { grid-area: 1 / 1 / 2 / 6; 
-	height: 100px}
-	#picture { grid-area: 2 / 1 / 4 / 4; }
-	#Description{ grid-area: 2 / 4 / 4 / 6; }
-	#Carousel { grid-area: 4 / 1 / 5 / 6; }
-	#ReviewsComp { grid-area: 5 / 1 / 6 / 6; }
-
-/* #main{
-	display: grid;
-	grid: 100px auto / repeat(2, 1fr);
-	grid-template-areas:
-		 "header header "
-		 "picture Description"
-		 "Carousel"
-		 "Reviews";
-	grid-gap: 20px;
-}
-#picture{
-	grid-area: picture;
-
-}
-#Description{
-	grid-area: Description;
-	background-color: yellow;
-	display: grid;
-	float: right;
+#Together{
+	margin-top: 100px;
+	width: 100%
 }
 #Carousel{
-	grid-area: Carousel;
-	display: grid;
-	margin-top: 100px;
-	background-color: red;
-	
-}
-#ReviewsComp{
-	display: grid;
-	background-color: green;
+	 margin-top: -180px 
 }
 
- */
+
+
+ #footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;            /* Footer height */
+  }

@@ -7,7 +7,7 @@ const port = 3002;
 
 app.use(express.static('dist'));
 
-app.get('/Header', (req, res) => {
+app.get('/Navbar', (req, res) => {
 	// console.log(path.join(`${__dirname}/../dist/bundle.js`));
 	
 	res.sendFile(path.join(`${__dirname}/dist/bundle.js`));

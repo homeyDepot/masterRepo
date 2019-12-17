@@ -1,3 +1,4 @@
+
 #img {
     max-width: 57.5%;
     width: 170px 170px
@@ -14,15 +15,17 @@
    }
 
 
-   #description {
+   .description {
        font-size: 14px;
    }
 
    #nextArrow {
  color:#ffffff;
-    position: relative;
+    /* position: relative; */
        bottom: 155px;
-       left: 1450px;
+       /* display: flex; */
+       justify-content: flex-start;  
+       /* left: 1950px;
        max-width: 140%;
        width: 110px 110px;
        background-color: #ffffff;
