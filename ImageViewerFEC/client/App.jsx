@@ -25,7 +25,7 @@ class App extends React.Component {
     const url = "http://localhost:3014/test_pic/"
     Axios.get(url + ok)
       .then(({ data }) => {
-        this.setState({ test_pic: data});
+        this.setState({ test_pic: data, currentImage: data});
     });
   }
       //   .then(({ data }) => {
@@ -51,10 +51,10 @@ class App extends React.Component {
                  <div className = "small" key = {i}>
                       <ul className = 'viewer'>
                             <li  onClick={() => this.handleClick(pic.img)}><img className='productImage1' src={pic.img} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic2)}><img className='productImage2' src={pic.pic2} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic3)}><img className='productImage3' src={pic.pic3} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic4)}><img className='productImage4' src={pic.pic4} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic5)}><img className='productImage5' src={pic.pic5} alt=''/></li>
+                            <li  onClick={() => this.handleClick(pic.pic1)}><img className='productImage2' src={pic.pic1} alt=''/></li>
+                            <li  onClick={() => this.handleClick(pic.pic2)}><img className='productImage3' src={pic.pic2} alt=''/></li>
+                            <li  onClick={() => this.handleClick(pic.pic3)}><img className='productImage4' src={pic.pic3} alt=''/></li>
+                            <li  onClick={() => this.handleClick(pic.pic4)}><img className='productImage5' src={pic.pic4} alt=''/></li>
                       </ul> 
                  </div>
                ))} 
