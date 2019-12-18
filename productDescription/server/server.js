@@ -11,7 +11,6 @@ const port = process.env.port || '3001';
 
 app.get('/product/:id', async (req, res) => {
   let id = req.path.split('/product/');
-  console.log(id)
 
   try {
     let results = await readDb.readDb.one(Number(id[1]));
