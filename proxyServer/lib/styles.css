@@ -2,14 +2,12 @@
 	box-sizing: border-box;
 } */
 
-#Header { 
-	grid-row-end: span 1;
-}
+#Header { grid-area: a;}
 #Pictures { grid-area: b; }
-	#Description{ grid-area: c; }
-	#Together{ grid-area: d;}
-	#Carousel { grid-area: e; }
-	#ReviewsComp { grid-area: f; }
+#Description{ grid-area: c; }
+#Together{ grid-area: d;}
+#Carousel { grid-area: e; }
+#ReviewsComp { grid-area: f; }
 
 
 #main {
@@ -17,7 +15,7 @@
 	grid-template-columns: repeat(2,2fr);
 	grid-template-rows: 10% 30% 30% 10% 20%;
 	grid-template-areas: 
-	"a ."
+	"a a"
 	"b c"
 	"d d"
 	"e e"

@@ -1,76 +1,69 @@
 import React from 'react';
 import Axios from 'axios';
-import './app.css'
+import './app.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      test_pic : [],
-      currentImage : '',
+      test_pic: [],
+      currentImage: '',
       query: 1001
     };
   }
 
   componentDidMount() {
-    window.addEventListener('hello', (e)=>{
-      this.setState({query: Number(e.detail)})
+    window.addEventListener('hello', e => {
+      this.setState({ query: Number(e.detail) });
       this.getImages(this.state.query);
-    })
-    this.getImages(this.state.query)
+    });
+    this.getImages(this.state.query);
   }
-
 
   getImages(ok) {
-    const url = "http://localhost:3014/test_pic/"
-    Axios.get(url + ok)
-      .then(({ data }) => {
-        this.setState({ test_pic: data});
+    const url = 'http://localhost:3014/test_pic/';
+    Axios.get(url + ok).then(({ data }) => {
+      this.setState({
+        test_pic: data[0],
+        currentImage: data[0].img
+      });
     });
   }
-      //   .then(({ data }) => {
-      //     this.setState({ test_pic: data });
-      //       // this.state.test_pic.map((currentImage) => {
-      //       //   this.setState({currentImage: test_pic.img})
-  
-      //       // })
-      // });
-
 
   handleClick(arg) {
-    this.setState({currentImage: arg});
+    this.setState({ currentImage: arg });
   }
-  
-
 
   render() {
+    const pic = this.state.test_pic;
     return (
-     <div>
-          <div className='main'>
-               {this.state.test_pic.map((pic,i) => (
-                 <div className = "small" key = {i}>
-                      <ul className = 'viewer'>
-                            <li  onClick={() => this.handleClick(pic.img)}><img className='productImage1' src={pic.img} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic2)}><img className='productImage2' src={pic.pic2} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic3)}><img className='productImage3' src={pic.pic3} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic4)}><img className='productImage4' src={pic.pic4} alt=''/></li>
-                            <li  onClick={() => this.handleClick(pic.pic5)}><img className='productImage5' src={pic.pic5} alt=''/></li>
-                      </ul> 
-                 </div>
-               ))} 
+      <div className="main">
+        <div className="small">
+          
+            <div onClick={() => this.handleClick(pic.img)}>
+              <img  src={pic.img} alt="" />
+            </div>
+            <div onClick={() => this.handleClick(pic.pic2)}>
+              <img  src={pic.pic2} alt="" />
+            </div>
+            <div onClick={() => this.handleClick(pic.pic3)}>
+              <img src={pic.pic3} alt="" />
+            </div>
+            <div onClick={() => this.handleClick(pic.pic4)}>
+              <img  src={pic.pic4} alt="" />
+            </div>
+            <div onClick={() => this.handleClick(pic.pic5)}>
+              <img  src={pic.pic5} alt="" />
+            </div>
+          
+        </div>
 
-                    <div className="big">
-                        <img src={this.state.currentImage} alt=''/>
-                    </div>
-
-          </div>
-
-  
-     </div>
-
-    )
+        <div className="big">
+          <img src={this.state.currentImage} alt="" />
+        </div>
+      </div>
+    );
   }
- }
-
+}
 
 export default App;
