@@ -17,8 +17,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">This Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span className="u__bold fbt__price">$94.00</span>
+                      "Titian Pine and Painted MDF Antique Tobacco Console Table"
+                      <span className="u__bold fbt__price">$112.00</span>
                     </span>
                     
                     </label>
@@ -32,8 +32,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span className="u__bold fbt__price">$44.00</span>
+                      "Roomba 960 Wi-Fi Connected Robot Vacuum"
+                      <span className="u__bold fbt__price">$449.00</span>
                     </span>
                     </label>
                   </div>
@@ -46,8 +46,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span id="item2" className="u__bold fbt__price"></span>$52
+                      "High Energy Alkaline AA/1.5-Volt Battery (60-Pack)"
+                      <span id="item2" className="u__bold fbt__price"></span>$19.97
                     </span>
                     </label>
                   </div>

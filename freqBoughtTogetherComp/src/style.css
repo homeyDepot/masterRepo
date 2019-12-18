@@ -38,10 +38,12 @@
  
  }
  #row{
-     content: "";
+    
      clear:both;
      display: flex;
      padding: 0mm;
+    
+     
      
  }
  
@@ -53,7 +55,10 @@
  .fbtProductImage{
      vertical-align: middle;
      max-width: 100%;
+     width: 200px;
+    
  }
+
  .comPrice{
      font-weight: 700;
      font-size: 30px;
@@ -130,3 +135,4 @@
      top: 50%;
      margin-top: -6px;
  }
+
