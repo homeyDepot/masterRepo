@@ -17,8 +17,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">This Item:</span>
-                      "Alwin Chocolate Italian Leather Sofa"
-                      <span className="u__bold fbt__price">$974.00</span>
+                      "Titian Pine and Painted MDF Antique Tobacco Console Table"
+                      <span className="u__bold fbt__price">$112.00</span>
                     </span>
                     
                     </label>
@@ -32,8 +32,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Oxford Chestnut Glass Door Bookcase"
-                      <span className="u__bold fbt__price">$344.00</span>
+                      "Roomba 960 Wi-Fi Connected Robot Vacuum"
+                      <span className="u__bold fbt__price">$449.00</span>
                     </span>
                     </label>
                   </div>
@@ -46,8 +46,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Stanton Walnut Deluxe Wrapping Storage Cart (20 in. W)"
-                      <span id="item2" className="u__bold fbt__price"></span>$152
+                      "High Energy Alkaline AA/1.5-Volt Battery (60-Pack)"
+                      <span id="item2" className="u__bold fbt__price"></span>$19.97
                     </span>
                     </label>
                   </div>
