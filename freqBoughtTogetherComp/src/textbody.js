@@ -17,8 +17,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">This Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span className="u__bold fbt__price">$94.00</span>
+                      "Alwin Chocolate Italian Leather Sofa"
+                      <span className="u__bold fbt__price">$974.00</span>
                     </span>
                     
                     </label>
@@ -32,8 +32,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span className="u__bold fbt__price">$44.00</span>
+                      "Oxford Chestnut Glass Door Bookcase"
+                      <span className="u__bold fbt__price">$344.00</span>
                     </span>
                     </label>
                   </div>
@@ -46,8 +46,8 @@ class Textbody extends Component{
                     <label className="checkbox-btn_label fbtProdDescription">
                     <span className="fbtProductMsg fbtOpacitizer">
                       <span className="u__bold">Suggested Item:</span>
-                      "Adler Single-Handle 4-Spray Tub and Shower Faucet With Valve in Chrome(Valve Included)"
-                      <span id="item2" className="u__bold fbt__price"></span>$52
+                      "Stanton Walnut Deluxe Wrapping Storage Cart (20 in. W)"
+                      <span id="item2" className="u__bold fbt__price"></span>$152
                     </span>
                     </label>
                   </div>

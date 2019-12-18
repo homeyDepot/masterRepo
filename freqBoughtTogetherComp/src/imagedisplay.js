@@ -5,22 +5,27 @@ import './style.css'
 
 class Imagedisplay extends Component{
     render(){
+      function totalSum(){
+        let cart= [];
+        return cart.push(1470);
+      }
+
       return(
         <div id="row" className="fbtProduct-Line">
 
                 <div>
-                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/aa5154d6-e176-463c-8225-cd16c0b89140/svn/chrome-moen-bathtub-shower-faucet-combos-82603-64_145.jpg"></img>
+                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/f103a2e8-c7e8-4db6-9069-8942d899a33e/svn/chocolate-leather-home-decorators-collection-sofas-loveseats-9948100120-e1_145.jpg"></img>
                 </div>               
                 <p className="plus">+</p> 
 
                 <div>  
-                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/012d00bf-b275-445b-84a7-d77dfe14af91/svn/chrome-moen-shower-faucets-82604-64_145.jpg"></img>
+                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/f7573381-7fcf-4ce3-8dd1-87cab5233c23/svn/chestnut-home-decorators-collection-bookcases-6054850970-64_600.jpg"></img>
                 </div> 
 
                 <p className="plus">+</p> 
 
                 <div>
-                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/df8e9b7f-6013-48bc-a1b3-f99082482eff/svn/white-glacier-bay-two-piece-toilets-n2316-64_145.jpg"></img>
+                  <img className="fbtProductImage" src="https://images.homedepot-static.com/productImages/d04ae477-0fbf-4cea-8bcc-6f1cb78aa7f0/svn/walnut-home-decorators-collection-craft-storage-1860000960-64_600.jpg"></img>
                 </div>
 
                 <div className="priceBlock">
@@ -29,10 +34,10 @@ class Imagedisplay extends Component{
                         <br></br>
                         <br></br>
                         <span className="fbtAtcPrice__currency">$</span>
-                        <span className="fbtAtcPrice__dollar">190</span>
+                        <span id="cart" className="fbtAtcPrice__dollar">1470</span>
                         <span className="fbtAtcPrice__cents">00</span>
                         <br></br><br></br>
-                        <button className="button">Add All Three To The Cart</button>
+                        <button onClick={this.totalSum}  data-product-sku="xboxoneblack" className="button">Add All Three To The Cart</button>
                     </span>    
             </div>
             </div>
