@@ -1,3 +1,2 @@
 # masterRepo
-this is where all comes together
-https://giphy.com/explore/its-all-coming-together
+Replica of the Home Depot website using service-oriented architecture.
