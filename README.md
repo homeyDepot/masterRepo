@@ -1,11 +1,16 @@
 
 # Home Repo
 (Home Depo Clone)
+
+
 ![](ImageCarousel/Image%20carousel.png)
+
+![](ImageCarousel/Image%20Viewer.png)
+
 
 ![](ImageCarousel/Freq%20Bought%20together.png)
 
-![](ImageCarousel/Image%20Viewer.png)
+
   
 # Contributors
 * [Franky](https://github.com/fleyva251)
