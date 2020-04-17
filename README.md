@@ -1,11 +1,11 @@
 
 # Home Repo
 (Home Depo Clone)
-
-
-![](ImageCarousel/Image%20carousel.png)
+![](ImageCarousel/Navbatr.png)
 
 ![](ImageCarousel/Image%20Viewer.png)
+
+![](ImageCarousel/Image%20carousel.png)
 
 
 ![](ImageCarousel/Freq%20Bought%20together.png)
