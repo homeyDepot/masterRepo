@@ -1,7 +1,7 @@
 
 # Home Repo
 (Home Depo Clone)
-
+![](ImageCarousel/Image%20carousel.png)
   
 # Contributors
 * [Franky](https://github.com/fleyva251)
